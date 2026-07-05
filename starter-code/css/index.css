@@ -1,0 +1,146 @@
+body {
+  background: url("../assets/home/background-home-mobile.jpg") no-repeat center;
+  min-height: 100dvh;
+  background-size: 100% 100%;
+  font-family: "Barlow Condensed";
+}
+
+p {
+  color: var(--font-color);
+  text-align: center;
+  padding-inline: 55px;
+}
+
+p.top {
+  text-transform: uppercase;
+  word-spacing: 5px;
+  letter-spacing: 2px;
+  margin-block: 20px;
+  font-weight: 300;
+  font-size: 19px;
+}
+
+p.content {
+  font-size: 18px;
+  line-height: 180%;
+  letter-spacing: 0px;
+  font-family: "Barlow Regular";
+}
+
+span.large {
+  font-size: 80px;
+  font-family: "Bellefair";
+  color: white;
+  margin-block: 15px;
+  display: inline-block;
+}
+
+.explore {
+  text-transform: uppercase;
+  background-color: #fff;
+  width: 150px;
+  height: 150px;
+  text-align: center;
+  padding-top: 70px;
+  border-radius: 50%;
+  margin-block: 10rem;
+  margin-inline: auto;
+  font-family: "Bellefair";
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+
+  a:visited {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+nav li:nth-child(1) {
+  border-right: 4px solid white;
+}
+
+@media (min-width: 767px) {
+  nav li:nth-child(1) {
+    border-right: none;
+    border-bottom: 4px solid white;
+    padding-bottom: 40px;
+  }
+
+  p.top {
+    font-size: 25px;
+    margin-top: 60px;
+
+    span {
+      font-size: 120px;
+    }
+  }
+
+  p.content {
+    font-size: 20px;
+  }
+
+  .explore {
+    width: 200px;
+    height: 200px;
+    padding-top: 95px;
+    font-size: 25px;
+    margin-block: 8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .explore:hover {
+    box-shadow: 0px 0px 0px 80px rgba(255, 255, 255, 0.3);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    background: url("../assets/home/background-home-desktop.jpg") no-repeat
+      center;
+    min-height: 100dvh;
+    background-size: 100% 100%;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(10, 10dvw);
+    grid-template-rows: repeat(8, 10dvh);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .half {
+    grid-column: 1 / 6;
+    grid-row: 4 / -1;
+
+    .top {
+      font-size: 30px;
+      text-align: left;
+
+      span {
+        padding-left: 20px;
+        font-size: 140px;
+      }
+    }
+
+    p.content {
+      text-align: left;
+      font-size: 25px;
+    }
+  }
+
+  .explore {
+    grid-row: 4 / -1;
+    grid-column: 5 / -1;
+
+    width: 300px;
+    height: 300px;
+    padding-top: 135px;
+    font-size: 35px;
+    margin-block: 8rem;
+  }
+}

@@ -1,0 +1,197 @@
+body {
+  background: url(../assets/destination/background-destination-mobile.jpg)
+    no-repeat center;
+  min-height: 100dvh;
+  min-width: 100dvw;
+  background-size: 100% 100%;
+  font-family: Barlow Condensed;
+  color: var(--font-color);
+}
+
+/* .head-note {
+  text-align: center;
+  text-transform: uppercase;
+  word-spacing: 5px;
+  margin-block: 20px;
+  font-weight: 200;
+  font-size: 19px;
+  letter-spacing: 2px;
+  color: white;
+
+  span {
+    color: rgba(255, 255, 255, 0.476);
+  }
+} */
+
+.img-div {
+  margin-block: 40px;
+  text-align: center;
+  img {
+    width: 45%;
+  }
+}
+
+.list {
+  margin: 0 auto;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+
+  li {
+    text-transform: uppercase;
+    list-style-type: none;
+    letter-spacing: 2px;
+
+    cursor: pointer;
+
+    &:hover {
+      border-bottom: 4px solid rgba(255, 255, 255, 0.734);
+    }
+  }
+}
+
+.title {
+  margin-block: 25px;
+  font-size: 65px;
+  font-weight: 100;
+  color: white;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: "Bellefair";
+}
+
+.text {
+  text-align: center;
+  padding-inline: 40px;
+  padding-bottom: 20px;
+  line-height: 180%;
+}
+
+hr {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.report {
+  margin-top: 15px;
+  line-height: 35px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-weight: 200;
+
+  span {
+    font-size: 25px;
+    font-weight: 400;
+    color: white;
+    font-family: "Bellefair";
+  }
+}
+
+nav li:nth-child(2) {
+  border-right: 4px solid white;
+}
+
+@media (min-width: 767px) {
+  nav li:nth-child(2) {
+    border-right: none;
+    border-bottom: 4px solid white;
+    padding-bottom: 40px;
+  }
+
+  .list {
+    justify-content: center;
+    font-size: 22px;
+    gap: 3rem;
+  }
+
+  .title {
+    font-size: 75px;
+  }
+
+  .text {
+    font-size: 20px;
+  }
+
+  .report {
+    font-size: 22px;
+    span {
+      font-size: 30px;
+    }
+  }
+
+  .rep-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 30px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* The default header styling had some disruption in the destination.html 😓 */
+  header {
+    grid-template-columns: repeat(15, 1em);
+  }
+
+  .symbols {
+    grid-column: 2 / 4;
+  }
+
+  .rule {
+    grid-column: 3 / 11;
+  }
+
+  nav {
+    grid-column: 9 / -1;
+  }
+
+  /* #### */
+
+  main {
+    display: grid;
+    grid-template-columns: repeat(10, 10dvw);
+    grid-template-rows: repeat(8, 10dvh);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .head-note {
+    grid-column: 1 / 6;
+    grid-row: 1 / 1;
+  }
+
+  .half {
+    grid-row: 1 / -1;
+    grid-column: 6 / -1;
+
+    p.text {
+      text-align: left;
+      font-size: 25px;
+      padding-inline: 0px;
+    }
+  }
+
+  .img-div {
+    grid-row: 1 / -1;
+    grid-column: 1 / 6;
+
+    img {
+      width: 50%;
+    }
+  }
+
+  .title {
+    font-size: 150px;
+    text-align: left;
+    /* border: 2px solid white; */
+  }
+
+  .list {
+    margin: 0;
+    justify-content: left;
+  }
+
+  hr {
+    margin-block: 50px;
+  }
+}

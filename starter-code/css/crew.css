@@ -1,0 +1,140 @@
+body {
+  background: url(../assets/crew/background-crew-mobile.jpg) no-repeat center;
+  min-height: 100dvh;
+  background-size: 100% 100%;
+  font-family: "Barlow Condensed";
+  color: var(--font-color);
+}
+
+.img-div {
+  margin-block: 40px;
+  text-align: center;
+  img {
+    width: 60%;
+  }
+}
+
+.head {
+  color: rgba(255, 255, 255, 0.492);
+  text-align: center;
+  text-transform: uppercase;
+  font-family: "Bellefair";
+  font-size: 18px;
+  line-height: 30px;
+  margin-block: 80px 20px;
+
+  span#name {
+    font-size: 25px;
+    color: white;
+  }
+}
+
+.circle-containers {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin-block: 20px;
+}
+
+.circle {
+  width: 10px;
+  height: 10px;
+  list-style-type: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+
+  cursor: pointer;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.8);
+  }
+}
+
+.text {
+  text-align: center;
+  padding-inline: 40px;
+  padding-bottom: 20px;
+  line-height: 180%;
+  margin-bottom: 50px;
+}
+
+nav li:nth-child(3) {
+  border-right: 4px solid white;
+}
+
+@media (min-width: 767px) {
+  nav li:nth-child(3) {
+    border-right: none;
+    border-bottom: 4px solid white;
+    padding-bottom: 40px;
+  }
+
+  .head {
+    font-size: 25px;
+    line-height: 60px;
+
+    span#name {
+      font-size: 40px;
+    }
+  }
+
+  .text {
+    font-size: 20px;
+  }
+
+  .img-div {
+    img {
+      width: 50%;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  main {
+    display: grid;
+    grid-template-columns: repeat(10, 10dvw);
+    grid-template-rows: repeat(8, 10dvh);
+    align-items: center;
+    justify-content: center;
+  }
+
+  .head-note {
+    grid-column: 1 / 6;
+    grid-row: 1 / 1;
+  }
+
+  .half {
+    grid-row: 1 / -1;
+    grid-column: 2 / 6;
+
+    p.text {
+      text-align: left;
+      font-size: 25px;
+      padding-inline: 0px;
+    }
+  }
+
+  .img-div {
+    grid-row: 1 / -1;
+    grid-column: 6 / -1;
+
+    img {
+      width: 50dvh;
+    }
+  }
+
+  .head {
+    font-size: 25px;
+    text-align: left;
+
+    span#name {
+      font-size: 50px;
+    }
+  }
+
+  .circle-containers {
+    margin-top: 150px;
+    gap: 30px;
+    justify-content: left;
+  }
+}
