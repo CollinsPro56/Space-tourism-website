@@ -36,7 +36,8 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github Repo Link](https://github.com/CollinsPro56/Space-tourism-website.git)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site Github URL: [https://collinspro56.github.io/Space-tourism-website/](https://collinspro56.github.io/Space-tourism-website/)
+- Live Site Vercel URL: [Add live site URL here](https://your-live-site-url.com)
 
 ## My process
 
